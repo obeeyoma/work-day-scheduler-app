@@ -12,20 +12,20 @@ $( document ).ready(function() {
     $('.time-block').hide();
     $(document).on('scroll', function () {  
    $( ".time-block" ).each(function() {
-  $(this).show('slow')
+       $(this).slideDown('slow')
 });
 })
 
 // * Color-code each timeblock based on past, present, and future when the timeblock is viewed.
     const currentHour = dayjs().format('H'); // 0 - 23
-    console.log(currentHour)
+
 
     //    console.log(first)
     $('.time-block').each(function () {
             // for each individual $('.time-block') element
      
             var indicatedHour = parseInt($(this).text())
-            console.log(indicatedHour)
+
             // if elementHour < currentHour 
             if(indicatedHour < currentHour)
             //      this element is in the past
@@ -49,37 +49,34 @@ $( document ).ready(function() {
               }
 
         });
- 
-
     
     // * Allow a user to enter an event when they click a timeblock
     
-    
+    $('.textarea').addClass('description')
+
     // * Save the event in local storage when the save button is clicked in that timeblock.
 
-    $('.saveBtn').click(function () {
-var paren = $(this).parent(this)
-            console.log(paren)  
-        })
+    $('.time-block').on('click', "button" ,function (event) {
+        
+        var temp = $(this).prev()
+        var eventEntry = temp.val()
+        var timeOfDay = temp.attr('data-hour')
+       console.log(eventEntry) 
+        const eventEntryObject = {
 
-    //     const eventDataObject = {
-    //         "day":$('#currentDay').text(),
-    //         "time": $('.time-block').text(),
-    //         "content":$('textarea').text()
-    //     }
-    //     console.log(eventDataObject)
-    // })
-})    
+            "day": currentDay,
+            "content":eventEntry
+        }
+        console.log(eventEntryObject)
+        localStorage.setItem(timeOfDay, JSON.stringify(eventEntryObject))
+    
+    })  
+// localStorage.clear()
+
+    }) 
     //document ready function 
 
-    
-    
 // * Persist events between refreshes of a page
-    
-    
-
-
- 
 
 
 
