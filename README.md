@@ -10,4 +10,4 @@ Work-Day-Scheduler-App is a simple calendar application that allows a user to sa
 <!-- ![Work-Day-Scheduler-App](assets/images/05-javascript-challenge-demo.png) -->
 
 ## Link to website
-[Work-Day-Scheduler-App](https://obeeyoma.github.io/Password-Generator/)
+[Work-Day-Scheduler-App](https://obeeyoma.github.io/work-day-scheduler-app/)
