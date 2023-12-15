@@ -9,13 +9,6 @@ $( document ).ready(function() {
 
     // * Present timeblocks for standard business hours when the user scrolls down.
 
-    $('.time-block').hide();
-    $(document).on('scroll', function () {  
-   $( ".time-block" ).each(function() {
-       $(this).slideDown('slow')
-});
-})
-
 // * Color-code each timeblock based on past, present, and future when the timeblock is viewed.
     const currentHour = dayjs().format('H'); // 0 - 23
 
