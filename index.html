@@ -20,80 +20,64 @@
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class="container vh-100">
+  <div class="container">
     <!-- Timeblocks -->
-
-    <div class=" row time-block">
-      <div class="hour col-2 col-sm-1">9:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="9" name="9am"></textarea>
-      <button type="submit" class="saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
-
-    <div class=" row time-block">
-      <div class="hour col-2 col-sm-1">10:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="10" name="10am"></textarea>
-      <button type="submit" class="saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
-
-    <div class=" row time-block">
-      <div class="hour col-2 col-sm-1">11:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="11" name="11am"></textarea>
-      <button type="submit" class=" saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
-
-    <div class="row time-block">
-      <div class="hour col-2 col-sm-1">12:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="12" name="12noon"></textarea>
-      <button type="submit" class="saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
-
-    <div class="row time-block">
-      <div class="hour col-2 col-sm-1">13:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="13" name="1pm"></textarea>
-      <button type="submit" class="saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
-
-    <div class="row time-block">
-      <div class="hour col-2 col-sm-1">14:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="14" name="2pm"></textarea>
-      <button type="submit" class="saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
-
-    <div class=" row time-block">
-      <div class="hour col-2 col-sm-1">15:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="15" name="3pm"></textarea>
-      <button type="submit" class="saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
-
-    <div class=" row time-block">
-      <div class="hour col-2 col-sm-1">16:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="16" name="4pm"></textarea>
-      <button type="submit" class="saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
-
-    <div class="row time-block">
-      <div class="hour col-2 col-sm-1">17:00</div>
-      <textarea class="textarea col-8 col-sm-10" data-hour="17" name="5pm"></textarea>
-      <button type="submit" class="saveBtn col-2 col-sm-1"><i class="fas fa-save"></i></button>
-    </div>
-
-    <!--------------------->
+    <form>
+      <!----------------------------9am-------------------->
+      <div class=" row time-block">
+        <label class="hour col-2" for="hour-9">9:00</label>
+        <textarea id="hour-9" class="textarea col-8" name="event-entry" data-hour="9AM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+      <!--------------------------10am--------------------->
+      <div class=" row time-block">
+        <label class="hour col-2" for="hour-10">10:00</label>
+        <textarea id="hour-10" class="textarea col-8" name="event-entry" data-hour="10AM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+      <!---------------------------11am-------------------->
+      <div class=" row time-block">
+        <label class="hour col-2" for="hour-11">11:00</label>
+        <textarea id="hour-11" class="textarea col-8" name="event-entry" data-hour="11AM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+      <!----------------------------12pm------------------->
+      <div class="row time-block">
+        <label class="hour col-2" for="hour-12">12:00</label>
+        <textarea id="hour-12" class="textarea col-8" name="event-entry" data-hour="12PM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+      <!------------------------------1pm------------------>
+      <div class="row time-block">
+        <label class="hour col-2" for="hour-13">13:00</label>
+        <textarea id="hour-13" class="textarea col-8" name="event-entry" data-hour="1PM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+      <!------------------------------2pm----------------->
+      <div class=" row time-block">
+        <label class="hour col-2" for="hour-14">14:00</label>
+        <textarea id="hour-14" class="textarea col-8" name="event-entry" data-hour="2PM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+      <!------------------------------3pm----------------->
+      <div class=" row time-block">
+        <label class="hour col-2" for="hour-15">15:00</label>
+        <textarea id="hour-15" class="textarea col-8" name="event-entry" data-hour="3PM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+      <!------------------------------4pm----------------->
+      <div class=" row time-block">
+        <label class="hour col-2" for="hour-16">16:00</label>
+        <textarea id="hour-16" class="textarea col-8" name="event-entry" data-hour="4PM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+      <!------------------------------5pm---------------->
+      <div class=" row time-block">
+        <label class="hour col-2" for="hour-17">17:00</label>
+        <textarea id="hour-17" class="textarea col-8" name="event-entry" data-hour="5PM" cols="10" rows="3"></textarea>
+        <button class="saveBtn col-2" type="submit"><i class="fas fa-save"></i></button>
+      </div>
+    </form>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

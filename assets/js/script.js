@@ -13,7 +13,7 @@ $( document ).ready(function() {
     const currentHour = dayjs().format('H'); // 0 - 23
 
 
-    //    console.log(first)
+
     $('.time-block').each(function () {
             // for each individual $('.time-block') element
      
@@ -24,21 +24,21 @@ $( document ).ready(function() {
             //      this element is in the past
             {
 
-                $(this).children().addClass('past')
+                $(this).children().eq(1).addClass('past')
 
                 }
             // if elementHour == currentHour
         if (indicatedHour == currentHour) {
                 
             //      this element is now
-                 $(this).children().addClass('present')
+                 $(this).children().eq(1).addClass('present')
             }
 
             // if elementHour > currentHour 
         if (indicatedHour > currentHour) {
                 
             //   this element is in the future  
-                $(this).children().addClass('future')
+                $(this).children().eq(1).addClass('future')
               }
 
         });
@@ -49,20 +49,37 @@ $( document ).ready(function() {
 
     // * Save the event in local storage when the save button is clicked in that timeblock.
 
-    $('.time-block').on('click', "button" ,function (event) {
-        
+    $('button').on('click',function (event) {
+        event.preventDefault()
+        var eventEntry;
         var temp = $(this).prev()
-        var eventEntry = temp.val()
+        // if textarea is empty
+        if (temp.val() === "") {
+            return
+        } else {
+            // if textarea is not empty
+            eventEntry = temp.val()
+        }
+
         var timeOfDay = temp.attr('data-hour')
-       console.log(eventEntry) 
+ 
         const eventEntryObject = {
 
             "day": currentDay,
             "content":eventEntry
         }
-        console.log(eventEntryObject)
+
         localStorage.setItem(timeOfDay, JSON.stringify(eventEntryObject))
+
     
+        // * Persist events between refreshes of a page
+        // every time user refreshes a page
+        // if saveddate variable is not null
+        // get from local storage each item that has the saveddate
+        // add each item to the textarea
+        // else do nothing
+
+
     })  
 // localStorage.clear()
 
