@@ -46,7 +46,7 @@ $(document).ready(function () {
     // If savebtn is clicked
     saveButton.click(function (event) {
       // Store entry in localstorage
-      if (eventEntry.val() == false) {
+      if (eventEntry.val() == null) {
         return;
       } else {
         localStorage.setItem(timeOfDay, eventEntry.val());
