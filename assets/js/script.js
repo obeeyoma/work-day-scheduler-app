@@ -33,30 +33,24 @@ $(document).ready(function () {
 
   $(this).children().eq(1).addClass("description");
 
-  // * Save the event in local storage when the save button is clicked in that timeblock.
+  //Save the event in local storage when the save button is clicked in that timeblock.
+  $(".time-block").each(function () {
+    // References for textarea entry, data-hour value and save button
+    var eventEntry = $(this).children().eq(1);
+    var timeOfDay = eventEntry.attr("data-hour");
+    var saveButton = $(this).children().eq(2);
 
-  $("button").on("click", function (event) {
-    event.preventDefault();
-    var eventEntry;
-    var temp = $(this).prev();
-    // if textarea is empty
-    if (temp.val() === "") {
-      return;
-    } else {
-      // if textarea is not empty
-      eventEntry = temp.val();
-    }
+    //Persist events between refreshes of a page
+    eventEntry.val(localStorage.getItem(timeOfDay));
 
-    var timeOfDay = temp.attr("data-hour");
-
-    const eventEntryObject = {
-      day: currentDay,
-      content: eventEntry,
-    };
-
-    localStorage.setItem(timeOfDay, JSON.stringify(eventEntryObject));
-
-    // * Persist events between refreshes of a page
+    // If savebtn is clicked
+    saveButton.click(function (event) {
+      // Store entry in localstorage
+      if (eventEntry.val() == false) {
+        return;
+      } else {
+        localStorage.setItem(timeOfDay, eventEntry.val());
+      }
+    });
   });
 });
-//document ready function
