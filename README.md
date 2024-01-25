@@ -1,5 +1,5 @@
 # Work-Day-Scheduler-App
-A project to generate a password based on certain criteria.
+A project to schedule and save events for the work day of the user.
 
 
 ## Description
@@ -7,7 +7,7 @@ Work-Day-Scheduler-App is a simple calendar application that allows a user to sa
 
 
 ## Screenshot
-<!-- ![Work-Day-Scheduler-App](assets/images/05-javascript-challenge-demo.png) -->
+![Work-Day-Scheduler-App](assets\images\screenshot-of-work-day-scheduler.png)
 
 ## Link to website
 [Work-Day-Scheduler-App](https://obeeyoma.github.io/work-day-scheduler-app/)
